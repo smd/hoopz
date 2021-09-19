@@ -1,0 +1,12 @@
+local ac = {"Speeding", "Spinning Detect", "Jumping", "HipHeight", "Long Arms", "JumpPower"}
+
+local old; old = hookmetamethod(game, "__namecall", function(self, ...)
+   local args = {...}
+   
+   if getnamecallmethod() == "FireServer" and self.Name == "sbEvent" then
+       if ac[args[1]] then
+           return
+       end
+   end
+   return old(self, ...)
+end)
