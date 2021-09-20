@@ -1,6 +1,4 @@
 
--- Decompiled with the Synapse X Luau decompiler.
-
 script.Disabled = true;
 task.wait();
 script:Destroy();
